@@ -1,0 +1,10 @@
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Priority</th>
+  </tr>
+  <% @tickets.each do |ticket| %>
+	<td><%= ticket.name %></td>
+	<td><%= ticket.priority %></td>
+  <% end %>
+</table>

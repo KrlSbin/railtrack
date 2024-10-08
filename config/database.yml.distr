@@ -1,0 +1,17 @@
+defaults: &defaults
+  adapter: postgresql
+  username: username
+  password: password
+  port: 5432
+  host: localhost
+  pool: 20
+
+development:
+  <<: *defaults
+  database: railtrack_development
+
+
+test:
+  <<: *defaults
+  database: railtrack_test
+  
