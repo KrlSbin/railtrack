@@ -5,6 +5,7 @@ ruby "3.3.5"
 gem "pg"
 gem "annotate"
 gem "rubocop"
+gem "byebug"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
