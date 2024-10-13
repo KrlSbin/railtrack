@@ -74,7 +74,10 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
-
+      
+      - name: Prepare db config
+        run: cp config/database.yml.distr config/database.yml 
+      
       - name: Run tests
         env:
           RAILS_ENV: test
