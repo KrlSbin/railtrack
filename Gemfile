@@ -8,13 +8,11 @@ gem "byebug"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 1.4"
+gem "sprockets-rails", "~> 3.5.2"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails", "2.0.2"
+gem "importmap-rails", "~> 2.0.2"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
@@ -36,6 +34,9 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+
+gem "dartsass-sprockets", "~> 3.1.0"
+gem "jquery-rails", "~> 4.6.0"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -59,6 +60,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "brakeman", "6.2.1"
-gem "bundler-audit", "0.9.2"
-gem "rubocop", "1.66.1"
+gem "brakeman", "~> 6.2.1"
+gem "bundler-audit", "~> 0.9.2"
+gem "rubocop", "~> 1.66.1"

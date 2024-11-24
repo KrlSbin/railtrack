@@ -1,0 +1,20 @@
+.project-box {
+  margin: 10px;
+  margin-right: 50%;
+  border-style: groove;
+  border-width: 1px;
+  border-color: rgb(117, 109, 109);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.index-main {
+  padding: 10px;
+}
+
+.top-header {
+}
+
+.new-project-link {
+  margin: 10px;
+}

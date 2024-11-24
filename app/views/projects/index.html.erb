@@ -1,15 +1,11 @@
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  
+<div class="index-main">
   <% @projects.each do |project| %>
-    <tr>
-      <td><%= project.name %></td>
-      <td><%= project.description %></td>
-    </tr>
+    <div class="project-box">
+      <%= link_to project.name, project_path(project) %>
+      <div>
+        <%= project.description %>
+      </div>
+    </div>
   <% end %>
-</table>
-<hr>
-<%= link_to 'Create new project', new_project_path %>
+  <%= link_to 'Create new project', new_project_path, class: 'new-project-link' %>
+</div>
