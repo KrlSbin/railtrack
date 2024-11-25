@@ -1,0 +1,34 @@
+.project-box {
+  margin: 10px;
+  width: 30%;
+  /* margin-right: 50%; */
+  border-style: groove;
+  border-width: 1px;
+  border-color: rgb(117, 109, 109);
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.index-main {
+  padding: 10px;
+}
+
+.top-header {
+}
+
+.new-project-link {
+  margin: 20px;
+}
+
+.top-header {
+  background-color: rgb(34, 161, 246);
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
