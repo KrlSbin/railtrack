@@ -173,11 +173,11 @@ GEM
     parser (3.3.5.1)
       ast (~> 2.4.1)
       racc
-    pg (1.5.9)
+    pg (1.5.8)
     psych (5.1.2)
       stringio
     public_suffix (6.0.1)
-    puma (6.4.3)
+    puma (6.5.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
@@ -319,8 +319,8 @@ DEPENDENCIES
   jsbundling-rails
   pg (= 1.5.8)
   puma (>= 5.0)
-  rubocop (~> 1.68.0)
   rails (~> 7.2.2)
+  rubocop (~> 1.68.0)
   rubocop-rails-omakase
   selenium-webdriver
   sprockets-rails (~> 3.5.2)
