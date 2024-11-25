@@ -173,7 +173,7 @@ GEM
     parser (3.3.5.1)
       ast (~> 2.4.1)
       racc
-    pg (1.5.9)
+    pg (1.5.8)
     psych (5.1.2)
       stringio
     public_suffix (6.0.1)
@@ -261,7 +261,7 @@ GEM
     sassc-embedded (1.79.0)
       sass-embedded (~> 1.79)
     securerandom (0.3.1)
-    selenium-webdriver (4.26.0)
+    selenium-webdriver (4.27.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -319,8 +319,8 @@ DEPENDENCIES
   jsbundling-rails
   pg (= 1.5.8)
   puma (>= 5.0)
-  rubocop (~> 1.68.0)
   rails (~> 7.2.2)
+  rubocop (~> 1.68.0)
   rubocop-rails-omakase
   selenium-webdriver
   sprockets-rails (~> 3.5.2)
