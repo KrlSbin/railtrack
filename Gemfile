@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.3.5"
 
-gem "pg", "1.5.8"
+gem "pg", "1.5.9"
 gem "annotate"
 gem "byebug"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
