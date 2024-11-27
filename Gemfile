@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.3.5"
 
-gem "pg", "1.5.8"
+gem "pg", "1.5.9"
 gem "annotate"
 gem "byebug"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -62,4 +62,4 @@ end
 
 gem "brakeman", "~> 6.2.1"
 gem "bundler-audit", "~> 0.9.2"
-gem "rubocop", "~> 1.68.0"
+gem "rubocop", "~> 1.69.0"
