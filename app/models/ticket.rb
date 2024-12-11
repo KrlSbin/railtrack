@@ -8,6 +8,7 @@
 #  priority    :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  project_id  :integer          not null
 #
 class Ticket < ApplicationRecord
   PRIORITIES = {
@@ -24,9 +25,11 @@ class Ticket < ApplicationRecord
 
   self.table_name = "tickets"
   validates_presence_of :name, :priority
-  validates :priority, inclusion: { in: %w[1 2 3] }
+  # validates :priority, inclusion: { in: %w[1 2 3] }
 
-  def priority
-    [ "low", "medium", "high" ]
-  end
+  belongs_to :project
+
+  # def priority
+  #   [ "low", "medium", "high" ]
+  # end
 end

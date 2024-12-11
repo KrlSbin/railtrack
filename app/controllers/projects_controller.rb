@@ -16,9 +16,14 @@ class ProjectsController < ApplicationController
     @project.save ? (redirect_to projects_path) : (render new_project_path)
   end
 
+  def show
+    @project = Project.find(params[:id])
+    @tickets = @project.tickets
+  end
+
   private
 
   def project_params
-    params.require(:project).permit(:name, :description)
+    params.require(:project).permit(:id, :name, :description)
   end
 end
