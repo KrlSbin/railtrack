@@ -10,8 +10,10 @@ development:
   <<: *defaults
   database: railtrack_development
 
-
 test:
   <<: *defaults
   database: railtrack_test
-  
+
+development:
+  <<: *defaults
+  database: railtrack_production
