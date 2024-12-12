@@ -14,6 +14,6 @@ test:
   <<: *defaults
   database: railtrack_test
 
-development:
+production:
   <<: *defaults
   database: railtrack_production
