@@ -5,6 +5,10 @@
       <div>
         <%= project.description %>
       </div>
+      <br>
+      <div>
+        <%= link_to 'Create new ticket', new_project_ticket_path(project) %>
+      </div>
     </div>
   <% end %>
 </div>

@@ -1,0 +1,17 @@
+.new-ticket-link {
+  margin: 20px;
+}
+
+.ticket-create-button {
+  width: 200px;
+}
+
+.ticket-input-field {
+  border-radius: 5px;
+  margin: 2px;
+  width: 200px;
+}
+
+.ticket-input-description-field {
+  height: 100px;
+}

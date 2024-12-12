@@ -1,0 +1,13 @@
+<br>
+<%= form_with model: @ticket, url: { action: "create" } do |form| %>
+  <div>
+    <%= form.text_field(:name, class: 'ticket-input-field', placeholder: 'Name') %>
+  </div>
+  <div>
+    <%= form.text_area(:description, class: 'ticket-input-field ticket-input-description-field', placeholder: 'Description') %>
+  </div>
+  <%= form.hidden_field :project_id, value: @ticket.project_id %>
+  <div>
+    <%= form.submit(:'Create Ticket', class: 'ticket-create-button') %>
+  </div>
+<% end %>

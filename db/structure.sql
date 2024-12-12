@@ -75,7 +75,8 @@ CREATE TABLE public.tickets (
     description text,
     priority smallint,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    project_id integer NOT NULL
 );
 
 
@@ -145,12 +146,21 @@ ALTER TABLE ONLY public.tickets
 
 
 --
+-- Name: tickets fk_rails_8ef7458990; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tickets
+    ADD CONSTRAINT fk_rails_8ef7458990 FOREIGN KEY (project_id) REFERENCES public.projects(id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20241205165251'),
 ('20241009104836'),
 ('20241003210639');
 
