@@ -16,4 +16,4 @@ test:
 
 production:
   <<: *defaults
-  database: railtrack_production
+  database: <%= ENV['DATABASE_URL'] %>
