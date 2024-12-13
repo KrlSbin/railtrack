@@ -1,7 +1,7 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: railtrack
+    databaseName: railtrack
+    user: KrlSbin
     plan: free
 
 services:
