@@ -10,4 +10,5 @@ bundle exec rails assets:clean
 # perform database migrations in the build command.
 # Uncomment the following line:
 
+cp config/database.yml.distr config/database.yml
 bundle exec rails db:migrate
