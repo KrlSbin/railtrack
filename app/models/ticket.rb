@@ -5,7 +5,7 @@
 #  id          :bigint           not null, primary key
 #  name        :string
 #  description :text
-#  priority    :integer
+#  priority    :integer          default(1), not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  project_id  :integer          not null
@@ -13,8 +13,8 @@
 class Ticket < ApplicationRecord
   PRIORITIES = {
     "low" => 1,
-    "medium" => 2,
-    "high" => 3
+    "medium" => 3,
+    "high" => 5
   }.freeze
 
   STATUSES = {
