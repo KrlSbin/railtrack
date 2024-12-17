@@ -6,6 +6,9 @@
   <div>
     <%= form.text_area(:description, class: 'ticket-input-field ticket-input-description-field', placeholder: 'Description') %>
   </div>
+  <div>
+    <%= form.select :priority, [["Low", 1], ["Medium", 3], ["High", 5]] %>
+  </div>
   <%= form.hidden_field :project_id, value: @ticket.project_id %>
   <div>
     <%= form.submit(:'Create Ticket', class: 'ticket-create-button') %>
