@@ -50,6 +50,10 @@ group :development, :test do
 
   gem "rspec-rails", "~> 7.1"
   gem "factory_bot_rails", "~> 6.4"
+
+  # for debug
+  gem "ruby-debug-ide", "~> 0.7.4"
+  gem "debase", "~> 0.2.8"
 end
 
 group :development do
