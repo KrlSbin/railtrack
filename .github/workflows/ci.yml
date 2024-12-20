@@ -3,94 +3,57 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [ main ]
+    branches: ['master']
 
 jobs:
-  scan_ruby:
+  scan_lint_test:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          bundler-cache: true
-
-      - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bin/brakeman --no-pager
-
-  scan_js:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          bundler-cache: true
-
-      - name: Scan for security vulnerabilities in JavaScript dependencies
-        run: bin/importmap audit
-
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          bundler-cache: true
-
-      - name: Lint code for consistent style
-        run: bin/rubocop -f github
-
-  test:
-    runs-on: ubuntu-latest
-    
     services:
       postgres:
         image: postgres:17-alpine
         ports:
-          - "5432:5432"
+          - '5432:5432'
         env:
           POSTGRES_DB: rails_test
           POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
-    
+
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
-    
-    steps:
-      - name: Install packages
-        run: sudo apt-get update && sudo apt-get install --no-install-recommends -y google-chrome-stable curl libjemalloc2 libvips sqlite3
+      DATABASE_URL: 'postgres://rails:password@localhost:5432/rails_test'
+      BUNDLE_WITHOUT: debug_gems
 
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Install Ubuntu Packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install build-essential bison openssl libreadline-dev curl git zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev autoconf libc6-dev libncurses-dev automake libtool
+          sudo apt-get install --no-install-recommends -y google-chrome-stable libjemalloc2 libvips sqlite3
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
           bundler-cache: true
-      
-      - name: Prepare db config
-        run: cp config/database.yml.distr config/database.yml 
-      
-      - name: Run tests
+
+      - name: Scan vulnerabilities and lint
+        run: |
+          bundle binstubs bundler-audit brakeman rubocop
+          bin/bundler-audit --update
+          bin/brakeman --no-pager -q -w2
+          bin/importmap audit
+          bin/rubocop --parallel -f github
+
+      - name: Prepare db and run tests
         env:
           RAILS_ENV: test
-          # REDIS_URL: redis://localhost:6379/0
-        run: bin/rails db:test:prepare test test:system
+        run: |
+          cp config/database.yml.distr config/database.yml
+          bin/rake
 
       - name: Keep screenshots from failed system tests
         uses: actions/upload-artifact@v4

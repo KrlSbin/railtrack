@@ -42,14 +42,20 @@ gem "jquery-rails", "~> 4.6.0"
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
   gem "rspec-rails", "~> 7.1"
   gem "factory_bot_rails", "~> 6.4"
+end
+
+group :debug_gems do
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+
+  # ide debug
+  gem "ruby-debug-ide", "~> 0.7.4"
+  gem "debase", "~> 0.2.8"
 end
 
 group :development do
