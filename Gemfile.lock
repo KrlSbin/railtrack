@@ -118,7 +118,7 @@ GEM
       reline (>= 0.3.8)
     diff-lcs (1.5.1)
     drb (2.2.1)
-    erubi (1.13.0)
+    erubi (1.13.1)
     factory_bot (6.5.0)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.4.4)
@@ -150,7 +150,7 @@ GEM
       railties (>= 6.0.0)
     json (2.9.1)
     language_server-protocol (3.17.0.3)
-    logger (1.6.3)
+    logger (1.6.4)
     loofah (2.23.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -366,4 +366,4 @@ RUBY VERSION
    ruby 3.3.6p108
 
 BUNDLED WITH
-   2.5.23
+   2.6.1
