@@ -1,8 +1,19 @@
-<% @tickets.each do |ticket| %>
-  <table>
+<table class="content-table">
+  <h3><%= @project.name %> tickets</h3>
+  <thead>
     <tr>
-      <td><%= ticket.name %></td>
-      <td><%= ticket.description %></td>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Priority</th>
     </tr>
-  </table>
-<% end %>
+  </thead>
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket.name %></td>
+        <td><%= ticket.description %></td>
+        <td><%= ticket.priority %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
