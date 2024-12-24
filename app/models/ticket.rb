@@ -26,7 +26,7 @@ class Ticket < ApplicationRecord
       "finished" => 3
     }.freeze
 
-    DONE_STATUSES = [true, false]
+    DONE_STATUSES = [ true, false ].freeze
   end
 
   validates_presence_of :name, :priority
