@@ -11,21 +11,26 @@
 #  project_id  :integer          not null
 #
 class Ticket < ApplicationRecord
-  PRIORITIES = {
-    "low" => 1,
-    "medium" => 3,
-    "high" => 5
-  }.freeze
-
-  STATUSES = {
-    "new" => 1,
-    "in progress" => 2,
-    "finished" => 3
-  }.freeze
-
   self.table_name = "tickets"
+  module CONST
+    PRIORITIES = {
+      "low" => 1,
+      "medium" => 3,
+      "high" => 5
+    }.freeze
+
+    STATUSES = {
+      "new" => 1,
+      "in progress" => 2,
+      "finished" => 3
+    }.freeze
+
+    DONE_STATUSES = [true, false]
+  end
+
   validates_presence_of :name, :priority
-  # validates :priority, inclusion: { in: %w[1 2 3] }
+  validates_inclusion_of :priority, { in: CONST::PRIORITIES.values }
+  validates_inclusion_of :done, { in: CONST::DONE_STATUSES }
 
   belongs_to :project
 

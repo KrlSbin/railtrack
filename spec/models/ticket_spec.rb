@@ -20,10 +20,11 @@ RSpec.describe Ticket, type: :model do
     let(:project) { FactoryBot.create(:project) }
     let(:ticket) {
       FactoryBot.build(:ticket,
-      name: name,
-      description: description,
-      priority: priority,
-      project: project)
+                       name: name,
+                       description: description,
+                       priority: priority,
+                       project: project,
+                       done: false)
     }
 
     subject do
