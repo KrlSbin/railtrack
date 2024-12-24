@@ -9,6 +9,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  project_id  :integer          not null
+#  done        :boolean          default(FALSE), not null
 #
 require 'rails_helper'
 
