@@ -1,0 +1,16 @@
+<br>
+<%= form_with model: @ticket, url: { action: "update" } do |form| %>
+  <div>
+    <%= form.text_field(:name, class: 'ticket-input-field', placeholder: 'Name') %>
+  </div>
+  <div>
+    <%= form.text_area(:description, class: 'ticket-input-field ticket-input-description-field', placeholder: 'Description') %>
+  </div>
+  <div>
+    <%= form.select :priority, [["Low", 1], ["Medium", 3], ["High", 5]] %>
+  </div>
+  <%= form.hidden_field :project_id, value: @ticket.project_id %>
+  <div>
+    <%= form.submit(:'Update Ticket', class: 'ticket-update-button') %>
+  </div>
+<% end %>
