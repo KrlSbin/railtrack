@@ -15,9 +15,9 @@ class Ticket < ApplicationRecord
   self.table_name = "tickets"
   module CONST
     PRIORITIES = {
-      "low" => 1,
-      "medium" => 3,
-      "high" => 5
+      1 => "low",
+      3 => "medium",
+      5 => "high"
     }.freeze
 
     STATUSES = {
@@ -26,16 +26,16 @@ class Ticket < ApplicationRecord
       "finished" => 3
     }.freeze
 
-    DONE_STATUSES = [ true, false ].freeze
+    DONE_STATUSES = [true, false].freeze
   end
 
   validates_presence_of :name, :priority
-  validates_inclusion_of :priority, { in: CONST::PRIORITIES.values }
+  validates_inclusion_of :priority, { in: CONST::PRIORITIES.keys }
   validates_inclusion_of :done, { in: CONST::DONE_STATUSES }
 
   belongs_to :project
 
   # def priority
-  #   [ "low", "medium", "high" ]
+  #   ["low", "medium", "high"]
   # end
 end
