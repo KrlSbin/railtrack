@@ -1,11 +1,19 @@
-<table class="table">
+<table class="content-table">
+  <h3><%= @project.name %> tickets</h3>
+  <thead>
   <tr>
     <th>Name</th>
     <th>Priority</th>
+    <th>Done</th>
   </tr>
+  </thead>
+  <tbody>
   <% @tickets.each do |ticket| %>
-    <td><%= ticket.name %></td>
-    <td><%= ticket.description %></td>
-    <td><%= ticket.priority %></td>
+    <tr>
+      <td><%= link_to(ticket.name, project_ticket_path(@project, ticket)) %></td>
+      <td><%= ticket.priority %></td>
+      <td><%= ticket.done %></td>
+    </tr>
   <% end %>
+  </tbody>
 </table>

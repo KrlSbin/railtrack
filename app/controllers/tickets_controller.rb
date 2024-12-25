@@ -1,6 +1,7 @@
 class TicketsController < ApplicationController
   def index
-    @tickets = Ticket.all
+    @project = Project.find(params[:project_id])
+    @tickets = @project.tickets
   end
 
   def new
