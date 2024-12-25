@@ -6,4 +6,7 @@ Layout/HashAlignment:
   EnforcedHashRocketStyle: key
 
 Layout/SpaceAroundOperators:
-  Enabled: true
+  AllowForAlignment: true
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
