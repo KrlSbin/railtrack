@@ -36,10 +36,10 @@ class TicketsController < ApplicationController
   end
 
   def create_ticket_params
-    params.require(:ticket).permit(:name, :description, :priority, :project_id)
+    params.require(:ticket).permit(:name, :description, :priority, :done, :project_id)
   end
 
   def update_ticket_params
-    params.require(:ticket).permit(:name, :description, :priority)
+    params.require(:ticket).permit(:name, :description, :priority, :done)
   end
 end

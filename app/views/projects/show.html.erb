@@ -4,6 +4,7 @@
     <tr>
       <th>Name</th>
       <th>Priority</th>
+      <th>Done</th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +12,7 @@
       <tr>
         <td><%= link_to(ticket.name, project_ticket_path(@project, ticket)) %></td>
         <td><%= ticket.priority %></td>
+        <td><%= ticket.done %></td>
       </tr>
     <% end %>
   </tbody>
