@@ -3,16 +3,16 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Description</th>
       <th>Priority</th>
+      <th>Done</th>
     </tr>
   </thead>
   <tbody>
     <% @tickets.each do |ticket| %>
       <tr>
-        <td><%= ticket.name %></td>
-        <td><%= ticket.description %></td>
+        <td><%= link_to(ticket.name, project_ticket_path(@project, ticket)) %></td>
         <td><%= ticket.priority %></td>
+        <td><%= ticket.done %></td>
       </tr>
     <% end %>
   </tbody>

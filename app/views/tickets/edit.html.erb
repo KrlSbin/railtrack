@@ -1,5 +1,5 @@
 <br>
-<%= form_with model: @ticket, url: { action: "create" } do |form| %>
+<%= form_with model: @ticket, url: { action: "update" } do |form| %>
   <div>
     <%= form.text_field(:name, class: 'ticket-input-field', placeholder: 'Name') %>
   </div>
@@ -15,6 +15,6 @@
   </div>
   <%= form.hidden_field :project_id, value: @ticket.project_id %>
   <div>
-    <%= form.submit(:'Create Ticket', class: 'ticket-create-button') %>
+    <%= form.submit(:'Update Ticket', class: 'ticket-update-button') %>
   </div>
 <% end %>

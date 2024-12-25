@@ -6,6 +6,10 @@
   width: 200px;
 }
 
+.ticket-update-button {
+  width: 200px;
+}
+
 .ticket-input-field {
   border-radius: 5px;
   margin: 2px;
