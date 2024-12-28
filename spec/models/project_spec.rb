@@ -9,5 +9,27 @@
 require 'rails_helper'
 
 RSpec.describe Project, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'validations' do
+    let(:name) { 'my project' }
+    let(:description) { 'my project description' }
+    let(:project) {
+      FactoryBot.build(:project,
+                       name: name,
+                       description: description)
+    }
+
+    subject do
+      project
+    end
+
+    context 'when valid' do
+      it_behaves_like :subject_valid
+    end
+
+    context 'when invalid' do
+      let(:name) { nil }
+
+      it_behaves_like :subject_invalid
+    end
+  end
 end

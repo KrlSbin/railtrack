@@ -13,11 +13,16 @@
 #
 class Ticket < ApplicationRecord
   self.table_name = "tickets"
+
   module CONST
+    LOW = "Low".freeze
+    MEDIUM = "Medium".freeze
+    HIGH = "High".freeze
+
     PRIORITIES = {
-      1 => "low",
-      3 => "medium",
-      5 => "high"
+      1 => LOW,
+      3 => MEDIUM,
+      5 => HIGH
     }.freeze
 
     STATUSES = {
@@ -35,7 +40,7 @@ class Ticket < ApplicationRecord
 
   belongs_to :project
 
-  # def priority
-  #   ["low", "medium", "high"]
-  # end
+  def priority_label
+    CONST::PRIORITIES[self.priority]
+  end
 end
