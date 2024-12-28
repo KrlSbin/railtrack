@@ -7,7 +7,7 @@
     <%= form.text_area(:description, class: 'ticket-input-field ticket-input-description-field', placeholder: 'Description') %>
   </div>
   <div>
-    <%= form.select :priority, [["Low", 1], ["Medium", 3], ["High", 5]] %>
+    <%= form.select :priority, Ticket::CONST::PRIORITIES.invert.to_a %>
   </div>
   <div>
     <%= form.check_box :done %>

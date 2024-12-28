@@ -11,7 +11,7 @@
   <% @tickets.each do |ticket| %>
     <tr>
       <td><%= link_to(ticket.name, project_ticket_path(@project, ticket)) %></td>
-      <td><%= ticket.priority %></td>
+      <td><%= ticket.priority_label %></td>
       <td><%= ticket.done %></td>
     </tr>
   <% end %>
