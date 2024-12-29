@@ -10,6 +10,9 @@
     <%= form.select :priority, Ticket::CONST::PRIORITIES.invert.to_a %>
   </div>
   <div>
+    <%= form.select :status, Ticket::CONST::STATUSES.invert.to_a %>
+  </div>
+  <div>
     <%= form.check_box :done %>
     <%= form.label :done %>
   </div>

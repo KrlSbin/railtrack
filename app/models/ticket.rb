@@ -10,6 +10,7 @@
 #  updated_at  :datetime         not null
 #  project_id  :integer          not null
 #  done        :boolean          default(FALSE), not null
+#  status      :integer          default(0)
 #
 class Ticket < ApplicationRecord
   self.table_name = "tickets"
@@ -25,10 +26,14 @@ class Ticket < ApplicationRecord
       5 => HIGH
     }.freeze
 
+    NEW = "New".freeze
+    IN_PROGRESS = "In Progress".freeze
+    FINISHED = "Finished".freeze
+
     STATUSES = {
-      "new" => 1,
-      "in progress" => 2,
-      "finished" => 3
+      0 => NEW,
+      3 => IN_PROGRESS,
+      5 => FINISHED
     }.freeze
 
     DONE_STATUSES = [true, false].freeze
@@ -42,5 +47,9 @@ class Ticket < ApplicationRecord
 
   def priority_label
     CONST::PRIORITIES[self.priority]
+  end
+
+  def status_label
+    CONST::STATUSES[self.status]
   end
 end
