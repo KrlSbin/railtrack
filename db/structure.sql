@@ -77,7 +77,8 @@ CREATE TABLE public.tickets (
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
     project_id integer NOT NULL,
-    done boolean DEFAULT false NOT NULL
+    done boolean DEFAULT false NOT NULL,
+    status integer DEFAULT 0
 );
 
 
@@ -161,6 +162,7 @@ ALTER TABLE ONLY public.tickets
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20241228225107'),
 ('20241224214739'),
 ('20241216165046'),
 ('20241205165251'),
