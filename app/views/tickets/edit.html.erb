@@ -12,10 +12,6 @@
   <div>
     <%= form.select :status, Ticket::CONST::STATUSES.invert.to_a %>
   </div>
-  <div>
-    <%= form.check_box :done %>
-    <%= form.label :done %>
-  </div>
   <%= form.hidden_field :project_id, value: @ticket.project_id %>
   <div>
     <%= form.submit(:'Update Ticket', class: 'ticket-update-button') %>

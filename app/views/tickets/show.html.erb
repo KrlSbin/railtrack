@@ -15,9 +15,6 @@
       <td><%= @ticket.status_label %></td>
     </tr>
     <tr>
-      <td><%= @ticket.done %></td>
-    </tr>
-    <tr>
       <td><%= link_to('edit', edit_project_ticket_path(@ticket.project, @ticket)) %></td>
     </tr>
   </tbody>
