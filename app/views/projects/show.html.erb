@@ -6,6 +6,7 @@
       <th>Priority</th>
       <th>Status</th>
       <th>Done</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,7 @@
         <td><%= ticket.priority_label %></td>
         <td><%= ticket.status_label %></td>
         <td><%= ticket.done %></td>
+        <td><%= link_to('edit', edit_project_ticket_path(@project, ticket)) %></td>
       </tr>
     <% end %>
   </tbody>
