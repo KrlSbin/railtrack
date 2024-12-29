@@ -9,7 +9,6 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  project_id  :integer          not null
-#  done        :boolean          default(FALSE), not null
 #  status      :integer          default(0)
 #
 class Ticket < ApplicationRecord
@@ -35,13 +34,10 @@ class Ticket < ApplicationRecord
       3 => IN_PROGRESS,
       5 => FINISHED
     }.freeze
-
-    DONE_STATUSES = [true, false].freeze
   end
 
   validates_presence_of :name, :priority
   validates_inclusion_of :priority, { in: CONST::PRIORITIES.keys }
-  validates_inclusion_of :done, { in: CONST::DONE_STATUSES }
 
   belongs_to :project
 

@@ -9,7 +9,6 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  project_id  :integer          not null
-#  done        :boolean          default(FALSE), not null
 #  status      :integer          default(0)
 #
 require 'rails_helper'
@@ -25,8 +24,7 @@ RSpec.describe Ticket, type: :model do
                        name: name,
                        description: description,
                        priority: priority,
-                       project: project,
-                       done: false)
+                       project: project)
     }
 
     subject do
