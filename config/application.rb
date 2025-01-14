@@ -25,8 +25,5 @@ module Railtrack
     # config.eager_load_paths << Rails.root.join("extras")
     #
     config.active_record.schema_format = :sql
-    credentials.production_database.map do |key, value|
-      ENV["production_database_#{key}"] = value.to_s
-    end
   end
 end
