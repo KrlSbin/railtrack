@@ -16,6 +16,7 @@ test:
 
 production:
   <<: *defaults
-  url: <%= ENV["DATABASE_URL"] %>
-  database: railtrack_production
-  password: <%= ENV["RAILTRACK_DATABASE_PASSWORD"]%>
+  host: <%= ENV['production_database_host'] %>
+  database: <%= ENV['production_database_name'] %>
+  username: <%= ENV['production_database_username'] %>
+  password: <%= ENV['production_database_password'] %>
