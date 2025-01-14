@@ -51,6 +51,7 @@ jobs:
       - name: Prepare db and run tests
         env:
           RAILS_ENV: test
+          RAILS_MASTER_KEY: ${{ secrets.MASTER_KEY }}
         run: |
           cp config/database.yml.distr config/database.yml
           bin/rake
