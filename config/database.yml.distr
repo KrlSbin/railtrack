@@ -20,5 +20,6 @@ production:
   host: <%= ENV['PRODUCTION_DATABASE_HOST'] %>
   database: <%= ENV['PRODUCTION_DATABASE_NAME'] %>
   port: <%= ENV['PRODUCTION_DATABASE_PORT'] %>
+  test: <%= puts Rails.application.credentials.to_json %>
   username: <%= Rails.application.credentials.production_database.username %>
   password: <%= Rails.application.credentials.production_database.password %>
