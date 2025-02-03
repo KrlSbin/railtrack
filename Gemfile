@@ -54,7 +54,7 @@ group :debug_gems do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
   # ide debug
-  gem "ruby-debug-ide", "~> 0.7.4"
+  gem "ruby-debug-ide", "~> 0.7.5"
   gem "debase", "~> 0.2.8"
 end
 
