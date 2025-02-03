@@ -55,7 +55,7 @@ group :debug_gems do
 
   # ide debug
   gem "ruby-debug-ide", "~> 0.7.5"
-  gem "debase", "~> 0.2.8"
+  gem "debase", "~> 0.2.9"
 end
 
 group :development do
