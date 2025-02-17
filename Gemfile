@@ -54,8 +54,8 @@ group :debug_gems do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
   # ide debug
-  gem "ruby-debug-ide", "~> 0.7.4"
-  gem "debase", "~> 0.2.8"
+  gem "ruby-debug-ide", "~> 0.7.5"
+  gem "debase", "~> 0.2.9"
 end
 
 group :development do
@@ -71,4 +71,4 @@ end
 
 gem "brakeman", "~> 7.0.0"
 gem "bundler-audit", "~> 0.9.2"
-gem "rubocop", "~> 1.70.0"
+gem "rubocop", "~> 1.72.2"
