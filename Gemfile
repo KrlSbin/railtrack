@@ -35,7 +35,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem "dartsass-sprockets", "~> 3.2.0"
+gem "dartsass-sprockets", "~> 3.2.1"
 gem "jquery-rails", "~> 4.6.0"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
