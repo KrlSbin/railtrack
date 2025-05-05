@@ -71,4 +71,4 @@ end
 
 gem "brakeman", "~> 7.0.2"
 gem "bundler-audit", "~> 0.9.2"
-gem "rubocop", "~> 1.75.4"
+gem "rubocop", "~> 1.75.5"
