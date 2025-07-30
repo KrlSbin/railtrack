@@ -132,7 +132,7 @@ GEM
       rake (>= 13)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    importmap-rails (2.2.0)
+    importmap-rails (2.2.1)
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
@@ -355,7 +355,7 @@ DEPENDENCIES
   debase (~> 0.2.9)
   debug
   factory_bot_rails (~> 6.5)
-  importmap-rails (= 2.2.0)
+  importmap-rails (= 2.2.1)
   jbuilder
   jquery-rails (~> 4.6.0)
   jsbundling-rails
