@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.3.6"
 
-gem "pg", "1.5.9"
+gem "pg", "1.6.1"
 gem "annotate"
 gem "byebug"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -12,7 +12,7 @@ gem "sprockets-rails", "~> 3.5.2"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails", "2.1.0"
+gem "importmap-rails", "2.2.2"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
@@ -46,7 +46,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "rspec-rails", "~> 8.0"
-  gem "factory_bot_rails", "~> 6.4"
+  gem "factory_bot_rails", "~> 6.5"
 end
 
 group :debug_gems do
@@ -69,6 +69,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "brakeman", "~> 7.0.2"
+gem "brakeman", "~> 7.1.0"
 gem "bundler-audit", "~> 0.9.2"
-gem "rubocop", "~> 1.75.4"
+gem "rubocop", "~> 1.79.2"
