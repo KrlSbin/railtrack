@@ -20,5 +20,5 @@ production:
   host: <%= ENV['PRODUCTION_DATABASE_HOST'] %>
   database: <%= ENV['PRODUCTION_DATABASE_NAME'] %>
   port: <%= ENV['PRODUCTION_DATABASE_PORT'] %>
-  username: <%= ENV.fetch("DATABASE_USERNAME") %>
-  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
