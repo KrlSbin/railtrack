@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.3.6"
 
-gem "pg", "1.6.1"
+gem "pg", "1.6.2"
 gem "annotate"
 gem "byebug"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
