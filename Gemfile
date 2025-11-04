@@ -69,6 +69,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "brakeman", "~> 7.1.0"
+gem "brakeman", "~> 7.1.1"
 gem "bundler-audit", "~> 0.9.2"
 gem "rubocop", "~> 1.81.7"
