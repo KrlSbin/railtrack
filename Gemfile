@@ -6,7 +6,7 @@ gem "pg", "1.6.3"
 gem "annotate"
 gem "byebug"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.2.3"
+gem "rails", "~> 8.1.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails", "~> 3.5.2"
 # Use the Puma web server [https://github.com/puma/puma]
