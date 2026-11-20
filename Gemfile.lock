@@ -189,14 +189,14 @@ GEM
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (2.3.0)
-    parser (3.3.13.0)
+    parser (3.3.14.0)
       ast (~> 2.4.1)
       racc
     pg (1.7.0)
     pp (0.6.4)
       prettyprint
     prettyprint (0.2.1)
-    prism (1.9.0)
+    prism (2.1.0)
     public_suffix (7.0.5)
     puma (8.1.1)
       nio4r (~> 2.0)
@@ -250,7 +250,7 @@ GEM
       prism (>= 1.6.0)
       rbs (>= 4.0.0)
       tsort
-    regexp_parser (2.13.1)
+    regexp_parser (2.13.4)
     reline (0.7.0)
       io-console (~> 0.5)
     rspec-core (3.13.7)
@@ -270,7 +270,7 @@ GEM
       rspec-mocks (>= 3.13.0, < 5.0.0)
       rspec-support (>= 3.13.0, < 5.0.0)
     rspec-support (3.13.8)
-    rubocop (1.92.2)
+    rubocop (1.92.3)
       json (>= 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -281,9 +281,11 @@ GEM
       rubocop-ast (>= 1.49.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.50.0)
+    rubocop-ast (1.53.0)
+      ast (~> 2.4)
       parser (>= 3.3.7.2)
-      prism (~> 1.7)
+      prism (>= 1.7)
+      racc
     rubocop-performance (1.24.0)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1, < 2.0)
@@ -371,7 +373,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.1.4)
   rspec-rails (~> 8.1)
-  rubocop (~> 1.92.2)
+  rubocop (~> 1.92.3)
   rubocop-rails-omakase
   ruby-debug-ide (~> 0.7.5)
   selenium-webdriver
