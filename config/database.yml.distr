@@ -1,9 +1,9 @@
 defaults: &defaults
   adapter: postgresql
-  username: username
-  password: password
-  port: 5432
-  host: localhost
+  username: <%= ENV.fetch("DB_USERNAME", "username") %>
+  password: <%= ENV.fetch("DB_PASSWORD", "password") %>
+  port: <%= ENV.fetch("DB_PORT", 5432) %>
+  host: <%= ENV.fetch("DB_HOST", "localhost") %>
   pool: 20
   schema_search_path: public
 
