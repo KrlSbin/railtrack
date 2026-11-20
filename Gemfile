@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.3.6"
+ruby "4.0.10"
 
 gem "pg", "1.7.0"
 gem "annotate"
