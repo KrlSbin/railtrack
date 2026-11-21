@@ -1,0 +1,17 @@
+#!/bin/bash -e
+# Entrypoint for the development container (see compose.yml).
+# Gems and node_modules live in Docker volumes, so install only what is missing.
+
+bundle check >/dev/null 2>&1 || bundle install
+[ -x node_modules/.bin/esbuild ] || yarn install --frozen-lockfile
+
+# Remove a stale server pid left over from a killed container.
+rm -f tmp/pids/server.pid
+
+# Create/migrate the databases before starting the app server.
+if [ "$1" = "bin/dev" ] || [ "$*" = "bin/rails server" ]; then
+  bin/rails db:prepare
+  RAILS_ENV=test bin/rails db:prepare
+fi
+
+exec "$@"
